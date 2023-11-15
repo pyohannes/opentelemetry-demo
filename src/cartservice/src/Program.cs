@@ -60,6 +60,7 @@ builder.Services.AddOpenTelemetry()
         .AddOtlpExporter())
     .WithMetrics(meterBuilder => meterBuilder
         .AddRuntimeInstrumentation()
+        .AddProcessInstrumentation()
         .AddAspNetCoreInstrumentation()
         .AddOtlpExporter());
 
